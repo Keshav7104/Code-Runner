@@ -25,7 +25,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/api/${username}`); // Replace 'john' with the desired username or provide it dynamically
+        const response = await fetch(`https://compilethecode.netlify.app/api/${username}`); // Replace 'john' with the desired username or provide it dynamically
 
         if (!response.ok) {
           throw new Error('Request failed');

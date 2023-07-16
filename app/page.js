@@ -42,7 +42,7 @@ function App() {
 		else {
 			setUserOutput('Submission Queued')
 			try {
-				const response = await fetch('http://localhost:3000/api/result', {
+				const response = await fetch('http://compilethecode.netlify.app/api/result', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ function App() {
 		else{
 			try {
 				setUserOutput("Data queued for server")
-				const response = await fetch('/api/submit', {
+				const response = await fetch('https://compilethecode.netlify.app/api/submit', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'

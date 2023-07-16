@@ -3,7 +3,6 @@
 import React,{useState} from 'react';
 import Select from 'react-select';
 import {signIn,getSession} from "next-auth/react"
-import {authoptions} from "../app/api/auth/[...nextauth]/route"; 
 import Link from 'next/link';
 
 const Navbar = ({ userLang, setUserLang, userTheme,
@@ -21,8 +20,8 @@ const Navbar = ({ userLang, setUserLang, userTheme,
 	// const route =useRouter()
 	const [logged, setlogged] = useState(true)
 	const sign= async()=>{
-		const session = await getSession(authoptions)
-		if(!session.user){
+		const session = await getSession()
+		if(!session){
 			signIn()
 		}
 		setlogged(false)

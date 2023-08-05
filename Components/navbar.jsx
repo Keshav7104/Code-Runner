@@ -28,7 +28,7 @@ const Navbar = ({ userLang, setUserLang, userTheme,
 		setusername(session.user.name)
 	}
 	return (
-		<div className={`flex items-center h-[80px] text-center  gap-7 pl-5 ${userTheme==="vs-dark"?"text-[#fffff0] bg-[#474747]":"text-[#474747] bg-[#fffff0]"}`}>
+		<div className={"flex items-center h-[80px] text-center  gap-7 pl-5" + (userTheme==="vs-dark"?"text-[#fffff0] bg-[#474747]":"text-[#474747] bg-[#fffff0]")}>
 			<h1 className='text-5xl font-semibold font-mono'>DevTown Compiler</h1>
 			<Select options={languages} value={userLang}
 				onChange={(e) => setUserLang(e.value)}
